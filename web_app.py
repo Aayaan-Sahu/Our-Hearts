@@ -34,7 +34,7 @@ def index():
 
 
 @app.route('/query/', methods=['POST'])
-def square():
+def query_input():
     query = request.form.get('query', 0)
     hue = request.form.get('hue', 0)
 
