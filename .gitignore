@@ -4,4 +4,4 @@ Include/
 Lib/
 Scripts/
 pyvenv.cfg
-static/temp.png
+/static/temp.png
