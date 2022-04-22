@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang='en'> 
+	<head> 
+		<title>Flask App</title> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Roboto+Mono&display=swap" rel="stylesheet">
+	</head>
+
+	<body> 
+
+		<form method="post" id="form"> 
+            <div>
+                <input type="text" id="sql" class="sql_input" name="sql" autocomplete="off" placeholder="SQL Query" style="color: #252936;">
+            </div>
+            <div>
+                <span class="container">
+                    <label for="hue" class="inside-content" class="form-control">Hue</label>
+                    <input class="inside-content" type="checkbox" id="hue" name="hue" value="hue">
+                </span>
+            </div>
+            <!-- <button class="query-button">Query</button>  -->
+            <button class="button-30" role="button">Query</button>
+		</form> 
+
+		<h1><~ Heart Disease Dataset ~></h1> 
+
+        <nav>
+            <ul>
+                <li><a id="smoking">Smoking & Heart Disease</a></li>
+                <li><a id="alcohol">Alcohol & Heart Disease</a></li>
+                <li><a id="kidney">Kindey Disease & Heart Disease</a></li>
+                <li><a id="bmi">BMI Histogram</a></li>
+            </ul>
+        </nav>
+
+        <img id="image" />
+
+        <!-- Javascript -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+        <script src="../static/js/index.js"></script>
+		
+	</body> 
+</html> 

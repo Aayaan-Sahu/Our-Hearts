@@ -1,0 +1,199 @@
+:root {
+    --primary: #94cdd1;
+    --secondary: #fead90;
+    --fg: #c5c4d4;
+    --gray: #252936;
+    --padding: 1.618rem;
+}
+
+* {
+    color: var(--fg);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+form {
+    padding: calc(var(--padding) * 3);
+}
+
+body {
+    background-color: #191c25;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: var(--padding);
+    text-align: center;
+    font-size: calc(var(--padding) * 3);
+    width: 100%;
+    color: var(--secondary);
+}
+
+ul {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(2, minmax(1px, 1fr));
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--padding);
+}
+
+li {
+    aspect-ratio: var(--padding) / 1;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fg);
+    font-size: 1rem;
+    text-decoration: none;
+    padding: calc(var(--padding) * 4);
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--gray);
+    border-radius: 0;
+    transition: border-color 0.5s ease-in-out;
+}
+
+a:focus,
+a:hover {
+    border: 1px solid var(--primary);
+    border-radius: 0;
+    outline: none;
+}
+
+a:active {
+    border: 1px solid var(--secondary);
+    background-color: #141927;;
+}
+
+#image {
+    display: none;
+    /* opacity: 0; */
+    padding: var(--padding);
+}
+
+::placeholder {
+    color: #252936;
+    opacity: 0.5;
+}
+
+#sql {
+    margin-bottom: var(--padding);
+    padding: 1.5rem 2rem;
+    background-color: rgb(230, 230, 230);
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+}
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid #fff;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #191c25;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.container {
+    display: inline-block;
+}
+
+.inside-content {
+    margin-right: 30px;
+}
+
+.form-control {
+    float: left;
+}
+
+#hue {
+    float: right;
+}
+
+.query-button {
+    margin-top: 10px;
+    padding: 10px;
+    color: #191c25;
+}
+
+/* CSS */
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 10px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
